@@ -1,7 +1,13 @@
 from malibrairie.mon_module import MaClasse
 
 
-def test_fuck_deco():
+def test_standard_use():
+    inst = MaClasse()
+    result = inst.get("google")
+    assert result == "https://google.com"
+
+
+def test_fuck_deco():  # FAIL
     inst = MaClasse()
     result = inst.get("google")
     assert result == "google"

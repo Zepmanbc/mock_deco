@@ -2,8 +2,6 @@ import functools
 
 
 def mondecorateur_avant(func):
-    """Recreate driver if not exists."""
-
     @functools.wraps(func)
     def wrapper(self, url):
         new_url = f"https://{url}"
@@ -13,8 +11,6 @@ def mondecorateur_avant(func):
 
 
 def mondecorateur_apres(func):
-    """Recreate driver if not exists."""
-
     @functools.wraps(func)
     def wrapper(self, url):
         new_url = f"{url}.com"
